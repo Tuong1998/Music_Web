@@ -1,0 +1,707 @@
+/* ==========================================
+   CSS VARIABLES & DESIGN TOKENS
+   ========================================== */
+:root {
+    /* Color Theme Matrix */
+    --secondary-fixed: #c9e6ff;
+    --secondary: #89ceff;
+    --tertiary: #ffb869;
+    --surface-dim: #131313;
+    --surface-container-low: #1c1b1b;
+    --surface-container-lowest: #0e0e0e;
+    --primary-container: #a078ff;
+    --on-secondary-fixed-variant: #004c6e;
+    --tertiary-container: #ca801e;
+    --on-surface-variant: #cbc3d7;
+    --surface-variant: #353534;
+    --tertiary-fixed-dim: #ffb869;
+    --on-tertiary-container: #3f2300;
+    --inverse-primary: #6d3bd7;
+    --primary-fixed-dim: #d0bcff;
+    --on-secondary-container: #00344e;
+    --on-primary-container: #340080;
+    --on-error: #690005;
+    --on-primary-fixed-variant: #5516be;
+    --tertiary-fixed: #ffdcbb;
+    --secondary-container: #00a2e6;
+    --primary-fixed: #e9ddff;
+    --on-secondary-fixed: #001e2f;
+    --surface: #131313;
+    --inverse-on-surface: #313030;
+    --background: #131313;
+    --primary: #d0bcff;
+    --outline-variant: #494454;
+    --on-tertiary-fixed-variant: #673d00;
+    --on-secondary: #00344d;
+    --surface-container-high: #2a2a2a;
+    --on-tertiary: #482900;
+    --on-primary-fixed: #23005c;
+    --on-error-container: #ffdad6;
+    --error: #ffb4ab;
+    --surface-container: #201f1f;
+    --on-tertiary-fixed: #2c1700;
+    --on-background: #e5e2e1;
+    --surface-container-highest: #353534;
+    --on-surface: #e5e2e1;
+    --on-primary: #3c0091;
+    --outline: #958ea0;
+    --surface-tint: #d0bcff;
+    --secondary-fixed-dim: #89ceff;
+    --inverse-surface: #e5e2e1;
+    --error-container: #93000a;
+    --surface-bright: #393939;
+}
+
+/* ==========================================
+   GLOBAL STYLES & TYPOGRAPHY
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--on-surface);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.app-body {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+}
+
+/* Material Symbols Custom Configuration */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    user-select: none;
+}
+
+.filled-icon {
+    font-variation-settings: 'FILL' 1 !important;
+}
+
+/* Utility Typography Classes */
+.font-label-md { font-family: 'Inter', sans-serif; }
+.text-label-md { font-size: 14px; line-height: 20px; letter-spacing: 0.01em; font-weight: 500; }
+.font-label-sm { font-family: 'Inter', sans-serif; }
+.text-label-sm { font-size: 12px; line-height: 16px; letter-spacing: 0.02em; font-weight: 500; }
+.font-body-md { font-family: 'Inter', sans-serif; }
+.text-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
+.font-headline-sm { font-family: 'Inter', sans-serif; }
+.text-headline-sm { font-size: 20px; line-height: 28px; font-weight: 600; }
+.font-display-lg { font-family: 'Inter', sans-serif; }
+.text-display-lg { font-size: 48px; line-height: 56px; letter-spacing: -0.02em; font-weight: 800; }
+
+.text-main { color: var(--on-surface); }
+.text-sub { color: var(--on-surface-variant); }
+
+/* ==========================================
+   COMPONENT: SIDE BAR NAVIGATION
+   ========================================== */
+.sidebar {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--surface-container-low);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    z-index: 50;
+}
+
+.logo-container {
+    margin-bottom: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.logo-img {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    font-weight: 500;
+    transform: scale(0.95);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.nav-item:hover {
+    background-color: rgba(53, 53, 52, 0.5); /* surface-variant/50 */
+}
+
+.nav-item:active {
+    transform: scale(0.90);
+}
+
+.nav-item.active {
+    color: var(--primary);
+    font-weight: 700;
+    border-right: 2px solid var(--primary);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(73, 68, 84, 0.1); /* outline-variant/10 */
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* ==========================================
+   COMPONENT: TOP NAVBAR
+   ========================================== */
+.main-content {
+    margin-left: 24px;
+    padding-left: 216px; /* Bù trừ khoảng trống rộng 240px của sidebar */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    overflow-y: auto;
+    padding-bottom: 96px;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 240px);
+    z-index: 40;
+    background-color: rgba(19, 19, 19, 0.8); /* background/80 */
+    backdrop-filter: blur(24px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.search-container {
+    position: relative;
+    width: 384px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--on-surface-variant);
+}
+
+.search-input {
+    width: 100%;
+    background-color: var(--surface-container-high);
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    padding: 8px 16px 8px 40px;
+    color: var(--on-surface);
+    transition: box-shadow 0.2s;
+}
+
+.search-input::placeholder {
+    color: var(--outline);
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 2px rgba(208, 188, 255, 0.5); /* primary/50 */
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.icon-btn:hover {
+    color: var(--primary);
+    opacity: 1;
+}
+
+.profile-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 9999px;
+    background-color: var(--surface-variant);
+    overflow: hidden;
+    border: 2px solid rgba(73, 68, 84, 0.2); /* outline-variant/20 */
+    cursor: pointer;
+}
+
+.avatar-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   PAGE MAIN CONTENT & HERO BANNER
+   ========================================== */
+.page-body {
+    padding-top: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.gradient-bg-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--background), rgba(19, 19, 19, 0.4), transparent);
+    z-index: 10;
+}
+
+.gradient-bg-h {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--background), rgba(19, 19, 19, 0.2), transparent);
+    z-index: 10;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s;
+}
+
+.hero-section:hover .hero-img {
+    transform: scale(1.05);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 20;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px;
+    gap: 16px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.verified-icon {
+    font-size: 18px !important;
+}
+
+.hero-meta {
+    color: var(--on-surface-variant);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.btn {
+    border: none;
+    font-weight: 700;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-primary-container {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-container:hover {
+    background-color: rgba(160, 120, 255, 0.9);
+}
+
+.btn-secondary-outline {
+    background-color: rgba(53, 53, 52, 0.4); /* surface-variant/40 */
+    backdrop-filter: blur(12px);
+    color: var(--on-surface);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary-outline:hover {
+    background-color: rgba(53, 53, 52, 0.6);
+}
+
+/* ==========================================
+   SONG TRACKS GRID TABLE
+   ========================================== */
+.song-list-section {
+    margin-bottom: 48px;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 48px 1fr 1fr 1fr 80px;
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(73, 68, 84, 0.1); /* outline-variant/10 */
+    color: var(--on-surface-variant);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    align-items: center;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+}
+
+.tracks-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.track-row {
+    display: grid;
+    grid-template-columns: 48px 1fr 1fr 1fr 80px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.track-row:hover {
+    background-color: rgba(53, 53, 52, 0.3); /* surface-variant/30 */
+}
+
+.track-index-col {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.index-text {
+    color: var(--on-surface-variant);
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.play-icon-row {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: var(--primary);
+    transition: opacity 0.2s;
+}
+
+/* Kích hoạt hiệu ứng hover dòng nhạc */
+.track-row:hover .index-text {
+    opacity: 0;
+}
+
+.track-row:hover .play-icon-row {
+    opacity: 1;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.track-art-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--surface-variant);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.track-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.track-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-titles .text-headline-sm {
+    line-height: 1.25;
+}
+
+.track-duration-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fav-icon {
+    color: var(--primary);
+    font-size: 20px !important;
+}
+
+/* ==========================================
+   COMPONENT: BOTTOM AUDIO PLAYER BAR
+   ========================================== */
+.player-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    z-index: 50;
+    background-color: rgba(32, 31, 31, 0.9); /* surface-container/90 */
+    backdrop-filter: blur(40px);
+    border-top: 1px solid rgba(73, 68, 84, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.player-track-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 30%;
+}
+
+.current-art-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: var(--surface-variant);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.current-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.current-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-fav-btn {
+    background: none;
+    border: none;
+    margin-left: 8px;
+    color: var(--primary);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.footer-fav-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Khu vực điều khiển trung tâm */
+.player-controls-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 576px;
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+}
+
+.text-hover-primary:hover {
+    color: var(--primary) !important;
+}
+
+.play-pause-btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: var(--on-surface);
+    color: var(--background);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, scale 0.1s;
+}
+
+.play-pause-btn:hover {
+    transform: scale(1.1);
+}
+
+.play-pause-btn:active {
+    transform: scale(0.95);
+}
+
+/* Thanh điều tiến trình thời gian nhạc */
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.time-text {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+}
+
+.progress-bar-bg {
+    flex: 1;
+    height: 6px;
+    background-color: var(--surface-container-highest);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%; /* Tiến trình ảo hiện tại */
+    background-color: var(--primary);
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+}
+
+.progress-bar-bg:hover .progress-bar-fill {
+    background-color: var(--primary-container);
+}
+
+/* Khu vực điều khiển bên phải (Âm lượng, tính năng khác) */
+.player-controls-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    width: 30%;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 128px;
+}
+
+.volume-bar-bg {
+    flex: 1;
+    height: 6px;
+    background-color: var(--surface-container-highest);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.volume-bar-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 70%; /* Âm lượng ảo hiện tại */
+    background-color: rgba(229, 226, 225, 0.6); /* on-surface/60 */
+    border-radius: 9999px;
+}

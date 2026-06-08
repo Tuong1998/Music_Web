@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>My Albums - Melodies Music</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="album.css">
+</head>
+<body>
+
+    <aside>
+        <div class="sidebar-logo-section">
+            <div class="logo-icon-wrapper">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">music_note</span>
+            </div>
+            <div class="logo-text-wrapper">
+                <span class="logo-title">Melodies</span>
+                <span class="logo-subtitle">Premium Music</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">home</span>
+                <span>Home</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">explore</span>
+                <span>Discover</span>
+            </a>
+            <a class="nav-item active" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">album</span>
+                <span>Albums</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">artist</span>
+                <span>Artists</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">schedule</span>
+                <span>Recently Added</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">favorite</span>
+                <span>Favorites</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined">search</span>
+                    <input class="search-input" placeholder="Search albums, artists, or songs" type="text">
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button class="icon-btn">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+                <div class="profile-wrapper">
+                    <img alt="User Profile" data-alt="A professional studio portrait of a young man..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR8EcRynriO-bdxouOMMyjn78VV7m7MPLeLNbne1bL9KtcvgcQWzZrMeeVvPmlnv43S9s8ZDAGGTy8jGGm7qYS39WfnIJuLC2ontT3h7eg3Cxiy9JMaKT7FtJb9JNrg1QT3zJl8e9bAZ740wnvajCR0P2i-THdumi8IvjEwu4Zp_l3cVU64PwvuywPOAfF8SZsRs9OD2Ok1416BbtvmA64tJUx823hG5TuBWY6tm4E7YsT0YtMnIK6Qg1ZrvGos0H33UinX1SerIo">
+                </div>
+            </div>
+        </header>
+
+        <section class="canvas">
+            <div class="canvas-header-section">
+                <div>
+                    <h1 class="canvas-title">My Albums</h1>
+                    <p class="canvas-subtitle">Manage your collection, created playlists, and studio projects in one immersive space.</p>
+                </div>
+                <button class="btn-create-album">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+                    Create New Album
+                </button>
+            </div>
+
+            <div class="filters-bar">
+                <div class="filter-tags">
+                    <button class="tag-btn active">All</button>
+                    <button class="tag-btn">Studio</button>
+                    <button class="tag-btn">Live</button>
+                    <button class="tag-btn">Playlists</button>
+                </div>
+                <div class="sort-wrapper">
+                    <span class="sort-label">Sort by:</span>
+                    <select class="sort-select">
+                        <option>Recent</option>
+                        <option>A-Z</option>
+                        <option>Release Date</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="album-grid">
+                <div class="album-card">
+                    <div class="album-art-wrapper">
+                        <img data-alt="Conceptual album cover art..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBleuU1bRARdQwZti87O4syYTUbHAu_947-dMefUfvCwjZ_uvd2qinEil0I-1ZRNOGSC0iRS9Ai3T8XYB6xhGymU2ELK1Lkhoy3bQBB0OifBJGFWXNw6Lu3pAjZiNAxcVmrrbOry3ltwCTQOCi24XDmtSba-A8lMqtX8stLzL_gxI04Z_pd3s4VkWIVENJAfy2YJC8fUFRK4oDc8IBJJDN3SXJdbwyKQNaoDpgORuApFxPD0hQwrzN3UsQUfGnfi-pkPoN6QZvOub4">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="album-details">
+                        <div class="album-meta">
+                            <h3 class="album-title">Midnight Echoes</h3>
+                            <p class="album-artist">Luna Void</p>
+                        </div>
+                        <button class="more-btn">
+                            <span class="material-symbols-outlined">more_vert</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="card-action-btn">Manage</button>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-art-wrapper">
+                        <img data-alt="Minimalist album cover..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7EiCG6O8pEqCpwo9-x0PFBt9GY21xCQaeZmyK8qgVgOsX7dMreD5j0IEsGig8ehFJ19B5GrY_20LZDv65Dmx3q-9LX69JxGLLECm3vHsWYbF0CcNSCj7CdrseRqBIz2Z5IgVATBH5FG-WnIHnxhH6LYcHlQ77cQICIcRydEIKkoQvouSN_1WUB66ooYVDnREVXIP5r_OhNupczfmj-qn6IMpmZBMvviHu2yIccAIjmn21c7kW-34trOq0glDijlqijSsd6tVwRY">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="album-details">
+                        <div class="album-meta">
+                            <h3 class="album-title">Analog Dreams</h3>
+                            <p class="album-artist">The Groove Guild</p>
+                        </div>
+                        <button class="more-btn">
+                            <span class="material-symbols-outlined">more_vert</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="card-action-btn">Manage</button>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-art-wrapper">
+                        <img data-alt="Highly energetic concert photography..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI51bA8z-7KFVz8VAJicr67UXUSJSHzDnadUEVyRuzwbvXNdJTx5bCTwBa4HbknGdXayoAzMP4SltZoQKHJNHB9SjQZqi_xoX1vmUzONMNthsWwsCwU-tjS2kRa1_gZXbPxb1F9Dx66l5jTML3Sgy-TOB-y86jeKpOAr8FQfc_uEjNCOkg953SrwlYESSl52atYGfqMbqUC3zyD6TmzTT5jd_brehaMYzs4vmjnNppgNv-dzegZPZbbPiFqDx2It2WKKFb1U1ndwk">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="album-details">
+                        <div class="album-meta">
+                            <h3 class="album-title">Live at Zenith</h3>
+                            <p class="album-artist">Vivid Pulse</p>
+                        </div>
+                        <button class="more-btn">
+                            <span class="material-symbols-outlined">more_vert</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="card-action-btn">Manage</button>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-art-wrapper">
+                        <img data-alt="Abstract digital artwork..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBjTvRlisdT38W0YHI6uWyw1GDpYsGxM0MyZ6j5ZLlOQwrFZpCTEBT2oroYlc0aNAPPvJPNX8dMKqXuFsvwGTq98zQJG6OEg_s6qwZ3wJbnLYFW6otQj0JMznjkafDPjApVIkIDvrCHhV0FRsQBfXg_dOcCeY1Rso5lnUQOKTVvvIrO6kAd0kvFcBJlFm46ZOaRu3hZ4HmCJWrfTa3UCsFQKUrQj-dSPW1dLxGP4FM0A0XM-Hqxa8KE8kNxhDCTlLnUsbV7f0YH7E">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="album-details">
+                        <div class="album-meta">
+                            <h3 class="album-title">Liquid State</h3>
+                            <p class="album-artist">Chrome Theory</p>
+                        </div>
+                        <button class="more-btn">
+                            <span class="material-symbols-outlined">more_vert</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="card-action-btn">Manage</button>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-art-wrapper">
+                        <div class="editing-badge">Editing</div>
+                        <img data-alt="A cinematic close-up of a high-end music production studio desk..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCA5AfXqcV96AEIlcnSueWsGF30vDu1H7jxEoQ4nELf2rVrjd3o_39SmgDQjigi4vMMmOcCqNabql-5YR-91crbBJMF-ngKSuZ91DtTHT-uYt84a130dzpClYdcvWN61ugY9mAqqsJEb8VmZmksUAa3qLmsjVSbwL2r4gwnrq7Hmixg5Bd5dOzy8Qn9NXQaXe2TXtQ9iRCtsRcj8mnXuuYX099kNuhm02EMkJt_qYDXCzJj2aWd1hfxQYSd5xMG76Iwz3RAvyeZNU">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">edit</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="album-details">
+                        <div class="album-meta">
+                            <h3 class="album-title">Studio Sessions Vol. 2</h3>
+                            <p class="album-artist">Self-Produced</p>
+                        </div>
+                        <button class="more-btn">
+                            <span class="material-symbols-outlined">more_vert</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="card-action-btn primary-action">Resume Edit</button>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="placeholder-card-art">
+                        <div class="placeholder-icon-circle">
+                            <span class="material-symbols-outlined">add</span>
+                        </div>
+                        <p class="placeholder-text">New Draft</p>
+                    </div>
+                    <div class="album-meta">
+                        <h3 class="album-title opacity-30">Untitled Album</h3>
+                        <p class="album-artist opacity-30">Draft</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="player-bar">
+            <div class="now-playing-section">
+                <div class="now-playing-art">
+                    <img alt="Now Playing" data-alt="A miniature thumbnail..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEU1fCsPiEejrmoJqnML9XjizRt4It5i-O1pfztooduOoIi5qQBUXfonOLVsYx6TaAeVMNcPlCv1YDEl2uI37-tzUs3vmP2AUL0moRCFTLRYUfl6qX3v-IwhNRaR3L6mJ6YjWVbGiD2shTnPSkGil__Nrmj5q9bo62DUzusQKW2lLe9A3hSunr_ZcBPS7GI8EY0IgfDsyTnvjtFJCg_nv9rvzwYlpH3cBqNDPhY8Y3u-HD7vth-eUnuPE65v6bG6pHmI5Yksr6Xcc">
+                </div>
+                <div class="now-playing-info">
+                    <span class="track-title">Midnight Echoes</span>
+                    <span class="track-artist">Luna Void</span>
+                </div>
+                <button class="fav-btn">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                </button>
+            </div>
+            <div class="player-controls-section">
+                <div class="control-buttons">
+                    <button class="control-btn">
+                        <span class="material-symbols-outlined">shuffle</span>
+                    </button>
+                    <button class="control-btn highlight">
+                        <span class="material-symbols-outlined">skip_previous</span>
+                    </button>
+                    <button class="main-play-btn">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </button>
+                    <button class="control-btn highlight">
+                        <span class="material-symbols-outlined">skip_next</span>
+                    </button>
+                    <button class="control-btn">
+                        <span class="material-symbols-outlined">repeat</span>
+                    </button>
+                </div>
+                <div class="progress-container">
+                    <span class="time-stamp">1:45</span>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
+                        <div class="progress-handle"></div>
+                    </div>
+                    <span class="time-stamp">3:52</span>
+                </div>
+            </div>
+            <div class="extra-controls-section">
+                <button class="control-btn">
+                    <span class="material-symbols-outlined">lyrics</span>
+                </button>
+                <button class="control-btn">
+                    <span class="material-symbols-outlined">queue_music</span>
+                </button>
+                <div class="volume-slider-container">
+                    <span class="material-symbols-outlined">volume_up</span>
+                    <div class="volume-bar-bg">
+                        <div class="volume-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <nav class="mobile-bottom-nav">
+        <a class="nav-item-mobile" href="#">
+            <span class="material-symbols-outlined">home</span>
+            <span>Home</span>
+        </a>
+        <a class="nav-item-mobile" href="#">
+            <span class="material-symbols-outlined">explore</span>
+            <span>Discover</span>
+        </a>
+        <a class="nav-item-mobile active" href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">album</span>
+            <span>Albums</span>
+        </a>
+        <a class="nav-item-mobile" href="#">
+            <span class="material-symbols-outlined">favorite</span>
+            <span>Favorites</span>
+        </a>
+    </nav>
+
+    <script>
+        // Search Bar Focus Effect
+        const searchInput = document.querySelector('.search-input');
+        if(searchInput) {
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.style.transform = 'scale(1.01)';
+            });
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.style.transform = 'scale(1)';
+            });
+        }
+    </script>
+</body>
+</html>

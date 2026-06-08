@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodies - Tạo tài khoản mới</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
+
+    <div class="register-wrapper">
+        
+        <div class="main-logo">
+            <h1>Melodies</h1>
+            <div class="logo-line"></div>
+        </div>
+
+        <div class="register-card">
+            <div class="card-header">
+                <h2>Tạo tài khoản mới</h2>
+                <p>Tham gia cộng đồng yêu nhạc cùng Melodies</p>
+            </div>
+
+            <form class="form-content">
+                <div class="input-group">
+                    <label for="fullname">Họ và tên</label>
+                    <div class="input-field">
+                        <i class="fa-regular fa-user icon-left"></i>
+                        <input type="text" id="fullname" placeholder="Nguyễn Văn A">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope icon-left"></i>
+                        <input type="email" id="email" placeholder="example@melodies.com">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="password">Mật khẩu</label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock icon-left"></i>
+                            <input type="password" id="password" placeholder="••••••••">
+                            <i class="fa-regular fa-eye icon-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="confirm-password">Xác nhận mật khẩu</label>
+                        <div class="input-field">
+                            <i class="fa-regular fa-shield icon-left"></i>
+                            <input type="password" id="confirm-password" placeholder="••••••••">
+                            <i class="fa-regular fa-eye icon-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">Tôi đồng ý với <span>Điều khoản</span> và <span>Chính sách bảo mật</span></label>
+                </div>
+
+                <button type="submit" class="btn-register">Đăng ký</button>
+            </form>
+
+            <div class="divider">
+                <span>Hoặc đăng ký bằng</span>
+            </div>
+
+            <div class="social-login">
+                <button class="btn-social">
+                    <i class="fa-brands fa-google color-google"></i>
+                    <span>Google</span>
+                </button>
+                <button class="btn-social">
+                    <i class="fa-brands fa-facebook color-facebook"></i>
+                    <span>Facebook</span>
+                </button>
+            </div>
+
+            <div class="card-footer">
+                <p>Bạn đã có tài khoản? <a href="#">Đăng nhập ngay</a></p>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            PREMIUM HIGH-FIDELITY AUDIO PLATFORM
+        </footer>
+
+    </div>
+
+</body>
+</html>

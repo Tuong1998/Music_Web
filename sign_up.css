@@ -1,0 +1,320 @@
+/* --- RESET CƠ BẢN VÀ BIẾN MÀU SẮC --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bg-gradient: radial-gradient(circle at top left, #1a1b35 0%, #0c0d19 40%, #070810 100%),
+                   radial-gradient(circle at bottom right, #241643 0%, transparent 60%);
+    --card-bg: rgba(21, 27, 43, 0.45);
+    --card-border: rgba(255, 255, 255, 0.05);
+    --input-bg: rgba(13, 17, 28, 0.7);
+    --input-border: rgba(255, 255, 255, 0.08);
+    --text-main: #ffffff;
+    --text-muted: #626d7f;
+    --text-label: #8c97a8;
+    --purple-light: #cbd5e1; /* Màu chữ nút đăng ký */
+    --purple-btn: #ccbfff; /* Nút Đăng ký gradient nhẹ */
+}
+
+body {
+    background: var(--bg-gradient);
+    background-color: #070810; /* Màu nền dự phòng */
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 40px 20px;
+}
+
+.register-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+}
+
+/* --- LOGO --- */
+.main-logo {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.main-logo h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.logo-line {
+    width: 42px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* --- CARD FORM ĐĂNG KÝ --- */
+.register-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    width: 100%;
+    padding: 44px 50px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.card-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.card-header p {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* --- ĐỊNH DẠNG FORM & INPUT --- */
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.input-row {
+    display: flex;
+    gap: 16px;
+}
+
+.input-group label {
+    font-size: 11px;
+    color: var(--text-label);
+    font-weight: 500;
+}
+
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field input {
+    width: 100%;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 13px 16px 13px 44px; /* Chừa khoảng trống bên trái cho icon */
+    color: var(--text-main);
+    font-size: 13px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-field input::placeholder {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.input-field input:focus {
+    border-color: rgba(204, 191, 255, 0.4);
+    background-color: rgba(13, 17, 28, 0.9);
+}
+
+/* Icons định vị trong ô nhập liệu */
+.icon-left {
+    position: absolute;
+    left: 16px;
+    color: var(--text-muted);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.icon-right {
+    position: absolute;
+    right: 16px;
+    color: var(--text-muted);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.icon-right:hover {
+    color: var(--text-main);
+}
+
+/* --- CHECKBOX TERMS --- */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    border-radius: 4px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.checkbox-group input[type="checkbox"]::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 9px;
+    color: #000;
+    transform: scale(0);
+    transition: transform 0.1s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: var(--purple-btn);
+    border-color: var(--purple-btn);
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.checkbox-group label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-group label span {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+/* --- NÚT ĐĂNG KÝ CHÍNH --- */
+.btn-register {
+    background: linear-gradient(180deg, #d2c7ff 0%, #b8a6ff 100%);
+    color: #120e2e;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 20px rgba(184, 166, 255, 0.25);
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-register:hover {
+    opacity: 0.95;
+}
+
+.btn-register:active {
+    transform: scale(0.99);
+}
+
+/* --- ĐƯỜNG NGĂN CÁCH (DIVIDER) --- */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 28px 0;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.divider:not(:empty)::before { margin-right: 16px; }
+.divider:not(:empty)::after { margin-left: 16px; }
+
+/* --- NÚT MXH (GOOGLE / FACEBOOK) --- */
+.social-login {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-social {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-social:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-social span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Màu gốc của brand icon mxh */
+.color-google { color: #f44336; }
+.color-facebook { color: #1877f2; }
+
+/* --- KHỐI FOOTER CARD --- */
+.card-footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-footer a {
+    color: #ccbfff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- TEXT FOOTER DƯỚI CÙNG --- */
+.app-footer {
+    margin-top: 36px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.15);
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}

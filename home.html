@@ -1,0 +1,442 @@
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Melodies - Vivid Sonic Music</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body class="custom-scrollbar">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h1>Melodies</h1>
+            <p>Premium Music</p>
+        </div>
+        <nav class="sidebar-nav custom-scrollbar">
+            <a class="nav-item active" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+                <span class="nav-text">Home</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">explore</span>
+                <span class="nav-text">Discover</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">album</span>
+                <span class="nav-text">Albums</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">person</span>
+                <span class="nav-text">Artists</span>
+            </a>
+            <div class="nav-section-title">Library</div>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">history</span>
+                <span class="nav-text">Recently Added</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">equalizer</span>
+                <span class="nav-text">Most played</span>
+            </a>
+            <div class="nav-section-title">Playlist and favorite</div>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">favorite</span>
+                <span class="nav-text">Your favorites</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">queue_music</span>
+                <span class="nav-text">Your playlist</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">add_circle</span>
+                <span class="nav-text">Add playlist</span>
+            </a>
+            <div class="nav-section-title">General</div>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="nav-text">Setting</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content custom-scrollbar">
+        <header class="top-bar">
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input placeholder="Search for Music, Artist, Album..." type="text" />
+            </div>
+            <div class="top-bar-right">
+                <div class="nav-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Premium</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-container">
+            <section class="hero-section">
+                <img class="hero-img" data-alt="Billie Eilish"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXGFdYCVd6SqgBUjXogqBQwiRQVF4yJTY-qfPii68xkt_6TGeSdUfWX_WnsSMVe1WVZqEybpwFjRYHy8L4zr18KX52BAvjZVwa0mogO2AyyDlPQ7FTAnobIUo5upceQ-3nUTsSU6mAEh3pXPyvu-kSY-qKieoeOdPMl6kHosLI-MD5SkOJNyGSJ2-7z0V8pFjopaL9_-dszGoL_SpEkMbPYESlhT9nEmTHck0fFFWgnOO0TMZyjdiF3YHmSfLxi7opXhHP_Z8ZwGI" />
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2>Billie Eilish</h2>
+                    <p>
+                        The definitive guide to everything Billie Eilish. From her chart-topping hits to her exclusive
+                        live performances. Dive into the dark, experimental world of pop's most intriguing voice.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn-play">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            Listen Now
+                        </button>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+                </div>
+                <div class="hero-dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </section>
+
+            <section class="section-gap">
+                <div class="section-header">
+                    <h3>Weekly Top <span class="text-primary">Songs</span></h3>
+                    <a class="view-all" href="#">View All <span
+                            class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+                <div class="song-carousel no-scrollbar">
+                    <div class="song-card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuANWefo8P2O7DyuojukRiGjA1yQHDGA1r8N-XKKvUUrvVXJwne76cr5QJyPENXfgbIXiXmi97Str7iFs5xK1_DljuK6vbSSUUn2QHP1MU-DVcQTc_XsZkkWdoQvuwI7HOaCJBflRfRrD2z7XRUZgeuCOyhfhYhfoGIxGtBuwI9jsGTxRBsMyUrDsuifAeknugvnGSbM560g8fgO3oOB4iXYaDJQ_DK7ONe5hI259dAFO911pCvu15rMadsk7KtAL4URLPLZL8LmdHo" />
+                            <div class="card-hover-overlay">
+                                <button class="play-btn-float shadow-xl">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Whatever It Takes</h4>
+                        <p>Imagine Dragons</p>
+                    </div>
+                    <div class="song-card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu3L7R8qy5pLmTpCdJR9cQepdJbGw6u7w9uN8-asLSRmuAE-W5qMYNNeOT9gVypgSy62q3KexADF7M_d4DDD2BUtwX_eW5dwAzwpgdBGyOI-xrwhNwPO5Uqpf3-nXrsnCR8qjqPSDaYI6oEldmE3izq49yemc_eVptAPKVdZF14N2GglzqZ8A4FIP0Fc2T_xhX2Je7J57hXsi1LzMOM7JTnV8duoKG_t_KmiT82TBcbApvbFeUvbOvKyJuKR9GRWa1z4A4RQ5AogA" />
+                            <div class="card-hover-overlay">
+                                <button class="play-btn-float">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Skyfall</h4>
+                        <p>Adele</p>
+                    </div>
+                    <div class="song-card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCimGUaHHSAVs_TuOgxoHkgalOoxxcQ7GAjfDj1XRJRIkd89hSu5sKw30Gk1J9r0ygJTAod5O7ZIUiMdY_8xRQL77fBafxdMmi92FfPZlRj3airzAMiY9goio-qDW1lYefcFGMQhpd_Q5wmwKIqeOr1Lkl_LSVcCnewBffTnlDRi-nmDtT-9kYjPhcgNVGWM5na4W7WSJqaIRa1TtOPdGM7rP-00nMQuIPgZ8OOcO8GAS07us88iUyBJtcmIogn_KCWki1QY57eLUw" />
+                            <div class="card-hover-overlay">
+                                <button class="play-btn-float">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Superman</h4>
+                        <p>Eminem</p>
+                    </div>
+                    <div class="song-card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVDks6fFx9AYYGE55WE3fpKjN56xyi8SEeenS_yjOGt6ToaezdcSNktLGNmvANYCtehn1I3DCY6NUmwgE_FQiyyaEatGuUKT-Eg01nwS5G8uPkCNR0nI_bDTXxX-oZA-TkbdEkRgyREWGixjm5Y4Qt4Lo8epDm3MVNSDcxg4ASeOmRBD3XEIxP7IQw7bhNw3GU_RDWSqH35x8PU0eu11EqQBSqsKb_BzGPmF4RQ5OqfnPrPy4swUEA0oOeFZfec4nWDoQFnBDb9zs" />
+                            <div class="card-hover-overlay">
+                                <button class="play-btn-float">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Softcore</h4>
+                        <p>The Neighbourhood</p>
+                    </div>
+                    <div class="song-card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDahW5lhZqqneeOcLxdtoHlKMh81A1KA7QQ14kNBl1NSqSlLGUiD_cUAB6T4_qW7UCgND0V6tyiwwEeUR14TdDQsz5YtCRvXzAIyBb2qXWpr7WQz-2zKSsGcwbMnECOQR3riDZyBjsLonuiYlFCB1vhsC3j_n0yWgG50Ht-QmiD5y08JRYEHTsbQBfDwtRJEaZIO0B8tHs-Rb5f2WrhheC65i7I7Kf_r08XCik5I6PEi_zg-LkO44gdmyqRfDLKvwVfhtX2Xvg7zXA" />
+                            <div class="card-hover-overlay">
+                                <button class="play-btn-float">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>No Limited</h4>
+                        <p>G-Eazy</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-gap">
+                <div class="section-header">
+                    <h3>New Release <span class="text-primary">Songs</span></h3>
+                </div>
+                <div class="album-grid">
+                    <div class="album-card">
+                        <div class="album-img-wrapper">
+                            <img class="album-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACeW_gBLN3GHcbxZuPqPZy_RCqMugjthanFGyounL_Crd1kgUmcky1DMofiIFunutGTlZM-VU1aN_aUTtRIQLnmrp3y2xSPXPL_hu-rKxZ0Imf6_8xPlaZkDKheJyHE8g3tJlGuk3afdBW9B0DyI3QiE3iNcbRgWLnpVqGyTYdee5ZPWu5UQzQdNVMO4zOfHQ0VA5wEoxQlGUo3ePR2vIF2BRijAsQIYZJcg-C5z8ZJcnvkrwW4jlWG9f8-O3IJFoZNTUfoKQkvWA" />
+                            <button class="add-btn-float">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                        <div class="album-info">
+                            <h4>Timeless</h4>
+                            <p>The Weeknd</p>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-img-wrapper">
+                            <img class="album-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4wVcKJgGaOtUnBAsPE7D6S40_ZkKBCPMrftrTmrxDRvj3IgQKn-hAXAi9yoAPh1YwcW9tXgkpyJ8AQmxALxjaxSewbaRvPRII9xpGdHenKUw1jvI0cyuHOX7vxi01JomW90hEoDslOveQEB24lpoyb5fHan-AOCegZccopecfTrdegSl4aV9PiYpcSOejwxwlgTnOnCBku7T1BGDlFlClxaknXTejcwMrG0CpmVwpT7fF04kwiOFX0OgOeU1VJAUE-Ym4wH2kDvA" />
+                            <button class="add-btn-float">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                        <div class="album-info">
+                            <h4>112</h4>
+                            <p>Ty Dolla $ign</p>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-img-wrapper">
+                            <img class="album-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS_yN3zYcSkHAV-cg34ynC0n7qwOKftJHtKpxjW_1fhrnIDUpnH0XzmQ4-dIeygJOPuFzNA_UxLRBmA-IOQLkuZNH8eKr7qpu4CTKcPDUybvY4pTt8CO1ewcMCkPEqQcdOl4pVsj_yPxQv0Qnh7Q3_68iZtFBrQQAZXxqiqmXNEMYi-8O1dGjLVqcQBYVs4VF-0rOVfYDJDbUzNGDo1faDeTUoV1zSM8yP_TchWxdfScJA94ZDEY7yQFBFrT-J3aupkJ-Do3sQHEE" />
+                            <button class="add-btn-float">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                        <div class="album-info">
+                            <h4>We don't care</h4>
+                            <p>French Montana</p>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-img-wrapper">
+                            <img class="album-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO6z7H9uvuZWoNdE2ipqYslgJDI6Hh1c2GILF-tSmNDdU-N-MRsBJsesyImSRuX48teDQ8ryjCstQ0fSq5cbRlsdKacKSO9X4ASw4pNpQhYnf5wX6GsQ1m9jWWPIB7AEpl-sDwLsrx4nPu-CzqL53Mi-8ZVjU1ekiKoo4WnRAlxwf0zQl-hK0Rct0Wp8pyhqjAwQNV0RcnqLnPXRy7_0rVJauVuv62TIm4BiIQPRUPxyW4v_NJxCmn47UwYU1cYerA2Y0TLuJU9QM" />
+                            <button class="add-btn-float">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                        <div class="album-info">
+                            <h4>Who am I</h4>
+                            <p>Justin Bieber</p>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-img-wrapper">
+                            <img class="album-img"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhSbps0h_JV5EMDqvcz_dga97wpO4iChcEjrP4c4l32hi2G4iVrbLG8mvnRUvNYgaa2FWML3ih2o40hI2CqwMTvD9FZJmWoFTO_AyK8WIQfl1jjhayl-QYkpV1HGlCbB1vMtomxOpKzNuTsinD_5baDcdYG0z7Y_bq5emceg1FsaC29H4wXSTOgQxKBT61FLKNG2xZKbk-cz9zIkDOMufpiYn0hLxFPG1oNb4byf25ZAFtG7M3yKdMXzD-OUjtv9CmpgjCH7Mn1wjA" />
+                            <button class="add-btn-float">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                        <div class="album-info">
+                            <h4>Saturn</h4>
+                            <p>SZA</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-gap trending-container">
+                <div class="section-header">
+                    <h3>Trending <span class="text-primary">Songs</span></h3>
+                </div>
+                <div class="table-responsive no-scrollbar">
+                    <table class="trending-table">
+                        <thead>
+                            <tr>
+                                <th class="w-12">#</th>
+                                <th>Release Date</th>
+                                <th>Album</th>
+                                <th class="text-right pr-8">Time</th>
+                                <th class="w-12"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-row">
+                                <td>
+                                    <div class="table-song-info">
+                                        <span class="row-num">01</span>
+                                        <img class="table-song-img"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMLDieMecAaQCZUdn-QT5d-vcdpXO3_KtFeqRr-6M0wQaR265kdA02-vjTnjU3pwRAgfUTbdUvIBHx4A47r8UJj1BBkPTWBrbUUZlSr9IQRBJ02Cp_Vw5z6QtsYV1mUQPtIwiloIuu8GCihcp8RPqmoTp7BZMOVOy-La9fqKouwAI8mxjak4n85fXRRtG3h_YVqreyGJ1QEW2y5nfKgt7Q4h-MuCtTktwWhgG2ZRBEYeb31JbQaA80FuBgJSTnJbnYNk5flHe8n-4" />
+                                        <div class="table-song-meta">
+                                            <span class="song-title">Softcore</span>
+                                            <span class="song-artist">The Neighbourhood</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-muted">Nov 4, 2023</td>
+                                <td class="text-muted max-w-200">Hard to Imagine Ever Changing</td>
+                                <td class="text-right pr-8">3:26</td>
+                                <td>
+                                    <span class="material-symbols-outlined fav-icon active">favorite</span>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>
+                                    <div class="table-song-info">
+                                        <span class="row-num">02</span>
+                                        <img class="table-song-img"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFDwma0Z6CmneI-mdvTNgcjhsEzc9ktWpw3RdPBVZG376_eBdlZ-ay4ICFc4QW0StpHi7w_luon96oemvq6qs3CtuzwlahL0MkDwFcXlYrBihkpZi4yLvtc61d3ifwJuBw4TB1aR84d_q3Z1ZywjsdyrbKCQQYDI14ParSD3aotNAzXPy1U_Cw_NsSe-aVE5e7ZU3dzLAs24I2TAtNGifc8YoIlMq7_e29Z3l_iKbMXHFVMHrWBcawUbssvksNb37zud_O-HJYa5I" />
+                                        <div class="table-song-meta">
+                                            <span class="song-title">Skyfall Beats</span>
+                                            <span class="song-artist">Night Lovell</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-muted">Oct 30, 2023</td>
+                                <td class="text-muted">nightmares</td>
+                                <td class="text-right pr-8">2:48</td>
+                                <td>
+                                    <span class="material-symbols-outlined fav-icon">favorite</span>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>
+                                    <div class="table-song-info">
+                                        <span class="row-num">03</span>
+                                        <img class="table-song-img"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiwWleaUKfwBETXVkzlox7bMCteuBsXmo0_o7zJg9qxRhL3YivCkvss_2i26pvle-PQRWH_lfZaO_OHUIX3Wart47hJx6DduP6-RhrE8krB20a2sKFFgAzCyu5D59b00IfLobHDfZblPJOL2cpgnishnL2Ff1_jcrfoO7V5pgVM1VyyEDNnX1uZrb_4b2v6K7bIGnlvZH_rqlGpf2L7bZiL46hCk4qlV-kWX--EFrJvaK88wXeTPIM0ex1kMuov3xYEHbGpMM1mBw" />
+                                        <div class="table-song-meta">
+                                            <span class="song-title">Greedy</span>
+                                            <span class="song-artist">Tate McRae</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-muted">Dec 12, 2023</td>
+                                <td class="text-muted">Greedy</td>
+                                <td class="text-right pr-8">2:11</td>
+                                <td>
+                                    <span class="material-symbols-outlined fav-icon active">favorite</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-center">
+                    <button class="btn-view-more">
+                        View All <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="section-gap">
+                <div class="section-header">
+                    <h3>Popular <span class="text-primary">Artists</span></h3>
+                </div>
+                <div class="artists-grid">
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeR6VEJY8XtTxNZ6XTRmz1hXjllbkCtSWWBS8XtW8DXlmwx0gHxIuLzlDif5mtJkGnczBBN6DobM09v6kN4Dc-YGPLGjQ3ltR-zVRL9U4WZPiIFLyQ4NCkBPaAR8JV_5Z2TwvJT5V78x60j1RH1x-k7dX5FUssfzSPPZWk1Y0EwqUqpiAwLy8K2K6yvCmlyt3lFz9HJD_EGjA5mcEbkEJ6agcV4EG_ojMlf4bS8QkK5M0SooT63n7NAtLv_1yf3ij4yGgDSQcyJB8" />
+                        </div>
+                        <span>Eminem</span>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5L_dO9oWCLKvmkIVms5NAUeTy-BKtsdcjxCfZTx_CKyRVe5e0peXGZcXkd5-P_Qj3cz_5TX6iV7lujQBo6jTXOgaQY2pTuctXiI1XF4POlUrP6XTDBtC_dD3ZcfpcBNiY9sn4Ux7VodlVNKzDq81aPi5CRqvFlkt88mHdvDd6ptD6fZ3I0I0TPSqnl2bbZYeHlJ-HwiOdM8bKcN11R1FlOtIx9OBuq8ArBkag5TRcBBAifiUPk_RHzBfp8UOSFZXZqKN2Mcjl19w" />
+                        </div>
+                        <span>Imagine Dragons</span>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhH9qMvcR8fvyjma211nddRkgmUb4LqfKfo5V1DIjVfNPyPMU1d1bB92g6fkB4hbiuValvqIL0g8Y5e0QgLi35MdcZFhsV5LUJPDjCmbu_W_fEJR_ta5CZqDkV_CP8mWH4669kFNhAzEWNX72dSOLRKubIo55A85qpByyJPVdk4-raSCpxTlWyIqd6Y1ynyUn_9QG_3dTqV5NywkZuxqt8LbohLGulCTH3P_wFOzp2VgVFKlr0ZXADBW1jroVoysVNFdFeufgYeeY" />
+                        </div>
+                        <span>Adele</span>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2y-FWGi0ZVImhHtXSpua_GBFTHucvTEmYRTCiq3E26_CZ-gGXcAnaSp51EFHwuUuqFJ-CYWb8KufPe3BpLgwe_mHJAQhledXnXIA8Jc4eBk4g1eFGlSYq3jjVLn8yPGj0mP-KSRok_SkSgJgVEu2Ui-WL2D-D2QO72FSbAt4eqDH0ttHp8sOqmEIIyqKeTFz_NWUbk0gcpI_jYa00ao0JemJSbZ0jMl2h24vvNwRy4Z6sCmmOyZbaRxpH5m5sBU_LY6sH9O6CG0w" />
+                        </div>
+                        <span>Lana Del Rey</span>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFtmUcFhcQmvHMJP0Pe6ntQHpCVM2_kj-wmPgjZZZAAV5LZWZpgKyGadeOUNuaXQeAIyzw447HxyHJI4Ozjq0rHEXAtRfj9sijz1AZvVPu8xHL-XtRZcXs7KdXkr26A---L3dPEo5jsDRnbPcDaFEZoN_DQ176xF5qX7livkpdG4OX8XI7iEgTxDbq79-w1orZUPsjAUBvtThcv4qEJkMqnkMnY1Bea1PT6RpKv4YU_D65oNj3HCT4LkN_dialwhmkTjidVakyfuc" />
+                        </div>
+                        <span>Harry Styles</span>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYAHpFjsxRxcHf87TKsnCItgl7ues78-Pedh0qjYNjgd1Z_T2lXuuvMZbteazkpzmeYAsbYtGmyZb5Ld0rHQYMuMg1jZ6G0fxoEv0Wk0fV6Bmkw85YPbaAuPfhCDst5WHSX4gcgNDJ1S6ilpzmeErxafhOipdpdJEx-AizjEV3u1iH4GB5LEKmBPiedplLRQQtMvagCqFWXBj5SlItUWyjr1rAnuhlkz8aZ1_EmAWGgDiESqtyv58v-pGL0pKxqjPvbYOEtDeEL0w" />
+                        </div>
+                        <span>Billie Eilish</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-gap">
+                <div class="section-header">
+                    <h3>Music <span class="text-primary">Video</span></h3>
+                </div>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj2nr16b-0lR_whfEVxvcKDE_luKtiXL8WU4nXiJsW3iGnTn-ngeu3jiij6e67JdP4gw9tWpl-51BLisr9EPCvWPtd62czf7UfiZMJr-x2OQ6IejNp_858JMuSUdnRkOnEP8tSXu0F_sGzg2KpJUl_3U3ao3d3LJTzjlRWuyRrHQDNFBs5Fw_x76Jk0e962btjgwfrId_g5lCXnk7EhWdUY9xJbJTuODVT6w5qR-nGJnhEefQmsjGYS-BGpEzuiq5jPGuJUdBKAmY" />
+                            <div class="video-overlay">
+                                <div class="video-play-btn">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Gossip</h4>
+                        <p>Maneskin • 120M views</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail-wrapper">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf8Q3B-3wRew2k0zoBvnLCmdREfVhtrcc2S2pCHoWUrLzpKXaWGL_UDaUNB3677BChp1qXFmTxJT_ktD0fXZmb3x6xl-SKTol9yxt22e_HDmB1R6rNxoWT2rRY5EcRNnbzDrML-jhiS_zkP84pKL_m6oyI4Zvxy3QHG5jo-4uMSonGfLcS4szai9tcqJLf6IbMT33NI1nbUmanLkI5NE7Iz-J2mETQm9ua8iridpFaCuu3PSIeXxeR1_VUOSOzTL5vTHmA0lGuoYo" />
+                            <div class="video-overlay">
+                                <div class="video-play-btn">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Shape Of You</h4>
+                        <p>Ed Sheeran • 6.2B views</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

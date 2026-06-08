@@ -1,0 +1,842 @@
+/* Thiết lập mã màu CSS Variables trích xuất trực tiếp từ cấu hình Tailwind config */
+:root {
+    --on-tertiary-fixed: #2c1700;
+    --on-primary-container: #340080;
+    --surface-tint: #d0bcff;
+    --inverse-surface: #e5e2e1;
+    --surface-container-high: #2a2a2a;
+    --surface-container-highest: #353534;
+    --surface-bright: #393939;
+    --on-primary: #3c0091;
+    --error: #ffb4ab;
+    --on-primary-fixed-variant: #5516be;
+    --on-surface-variant: #cbc3d7;
+    --surface-container: #201f1f;
+    --on-secondary: #00344d;
+    --primary-fixed-dim: #d0bcff;
+    --primary-container: #a078ff;
+    --surface-container-low: #1c1b1b;
+    --error-container: #93000a;
+    --tertiary-container: #ca801e;
+    --secondary-container: #00a2e6;
+    --background: #131313;
+    --secondary-fixed-dim: #89ceff;
+    --on-secondary-fixed: #001e2f;
+    --outline-variant: #494454;
+    --primary: #d0bcff;
+    --on-error-container: #ffdad6;
+    --on-tertiary-container: #3f2300;
+    --on-background: #e5e2e1;
+    --secondary: #89ceff;
+    --surface-variant: #353534;
+    --secondary-fixed: #c9e6ff;
+    --outline: #958ea0;
+    --on-secondary-container: #00344e;
+    --surface-dim: #131313;
+    --on-error: #690005;
+    --surface: #131313;
+    --inverse-on-surface: #313030;
+    --tertiary-fixed: #ffdcbb;
+    --inverse-primary: #6d3bd7;
+    --on-primary-fixed: #23005c;
+    --tertiary-fixed-dim: #ffb869;
+    --tertiary: #ffb869;
+    --on-tertiary-fixed-variant: #673d00;
+    --surface-container-lowest: #0e0e0e;
+    --on-surface: #e5e2e1;
+    --on-tertiary: #482900;
+    --primary-fixed: #e9ddff;
+    --on-secondary-fixed-variant: #004c6e;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--on-surface);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    display: flex;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Tùy biến Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--outline-variant);
+    border-radius: 10px;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Sidebar bên trái */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 240px;
+    background-color: var(--surface-container-low);
+    border-right: 1px solid var(--outline-variant);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    z-index: 50;
+}
+
+.sidebar-brand {
+    margin-bottom: 32px;
+    padding: 0 8px;
+}
+
+.sidebar-brand h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 32px;
+}
+
+.sidebar-brand p {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+    opacity: 0.7;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-bottom: 96px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    color: var(--on-surface);
+    background-color: var(--surface-variant);
+}
+
+.nav-item.active {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+    font-weight: 700;
+}
+
+.nav-section-title {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--outline);
+    font-weight: 700;
+}
+
+/* Content bên phải */
+.main-content {
+    margin-left: 240px;
+    height: 100vh;
+    width: calc(100% - 240px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Thanh điều hướng trên */
+.top-bar {
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    padding: 0 32px;
+    background-color: rgba(19, 19, 19, 0.8);
+    backdrop-filter: blur(12px);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--surface-container-high);
+    border-radius: 9999px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 448px;
+}
+
+.search-box span {
+    color: var(--on-surface-variant);
+    margin-right: 8px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--on-surface);
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-box input::placeholder {
+    color: var(--on-surface-variant);
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: 16px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-login {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: var(--on-surface);
+    padding: 8px 16px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover { opacity: 1; }
+
+.btn-signup {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+    box-shadow: 0 0 20px rgba(208, 188, 255, 0.4);
+}
+
+.btn-signup:active { transform: scale(0.95); }
+
+.content-container {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 48px;
+}
+
+@media (max-width: 1024px) {
+    .content-container { padding: 32px 32px; }
+}
+
+/* Banner Hero Section */
+.hero-section {
+    position: relative;
+    aspect-ratio: 21 / 9;
+    min-height: 300px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 64px;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(19, 19, 19, 0.9) 0%, rgba(19, 19, 19, 0.4) 50%, transparent 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    max-width: 672px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 56px;
+}
+
+@media (max-width: 1024px) {
+    .hero-content h2 { font-size: 32px; line-height: 40px; }
+}
+@media (max-width: 768px) {
+    .hero-content h2 { font-size: 24px; line-height: 32px; }
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--on-surface-variant);
+    margin-bottom: 32px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero-content p { font-size: 14px; line-height: 22px; margin-bottom: 16px; -webkit-line-clamp: 2; }
+}
+
+.hero-actions { display: flex; gap: 16px; }
+
+.btn-play {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 9999px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-play:hover { transform: scale(1.05); }
+
+@media (max-width: 768px) {
+    .btn-play { font-size: 14px; padding: 8px 24px; }
+}
+
+.btn-follow {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-follow:hover { background-color: rgba(255, 255, 255, 0.2); }
+
+@media (max-width: 768px) {
+    .btn-follow { font-size: 14px; padding: 8px 24px; }
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 24px;
+    right: 48px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dot.active { background-color: var(--primary); }
+
+.section-gap { margin-bottom: 64px; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.section-header h3 { font-size: 32px; font-weight: 700; }
+
+@media (max-width: 768px) {
+    .section-header h3 { font-size: 24px; }
+}
+
+.text-primary { color: var(--primary); }
+
+.view-all {
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.view-all:hover { color: var(--primary); }
+
+.view-all span { font-size: 18px; margin-left: 4px; }
+
+/* Song Carousel (Cuộn Ngang) */
+.song-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    scroll-behavior: smooth;
+}
+
+.song-card {
+    min-width: 200px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .song-card { min-width: 160px; }
+}
+
+.card-img-wrapper {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.song-card:hover .card-img { transform: scale(1.1); }
+
+.card-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.song-card:hover .card-hover-overlay { opacity: 1; }
+
+.play-btn-float {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(16px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.song-card:hover .play-btn-float { transform: translateY(0); }
+
+.song-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .song-card h4 { font-size: 16px; }
+}
+
+.song-card p { font-size: 14px; color: var(--on-surface-variant); }
+
+@media (max-width: 768px) {
+    .song-card p { font-size: 12px; }
+}
+
+/* Grid Layout chứa Album mới */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .album-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+    .album-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+    .album-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.album-card { display: flex; flex-direction: column; gap: 12px; }
+
+.album-img-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--outline-variant);
+    transition: border-color 0.3s;
+}
+
+.album-card:hover .album-img-wrapper { border-color: var(--primary); }
+
+.album-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.album-card:hover .album-img { filter: brightness(0.5); }
+
+.add-btn-float {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.album-card:hover .add-btn-float { opacity: 1; transform: translateY(0); }
+
+.album-info { padding: 0 4px; }
+
+.album-info h4 {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-info p { font-size: 12px; color: var(--on-surface-variant); }
+
+/* Bảng hiển thị Trending */
+.trending-container {
+    background-color: var(--surface-container-lowest);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--outline-variant);
+}
+
+.table-responsive { overflow-x: auto; width: 100%; }
+
+.trending-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.trending-table th {
+    padding-bottom: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--on-surface-variant);
+    border-bottom: 1px solid var(--outline-variant);
+}
+
+.table-row { transition: background-color 0.2s; }
+.table-row:hover { background-color: rgba(53, 53, 52, 0.3); }
+.table-row td { padding: 16px 0; vertical-align: middle; }
+
+.table-song-info { display: flex; align-items: center; gap: 16px; }
+
+.row-num { color: var(--on-surface-variant); width: 16px; }
+
+.table-song-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.table-song-meta {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 150px;
+}
+
+.song-title {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-artist {
+    font-size: 12px;
+    color: var(--on-surface-variant);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-muted { color: var(--on-surface-variant); }
+
+.max-w-200 {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-right { text-align: right; }
+.pr-8 { padding-right: 32px; }
+.w-12 { width: 48px; }
+
+.fav-icon {
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--outline);
+}
+
+.fav-icon:hover { color: var(--primary); }
+.fav-icon.active { color: var(--primary); }
+.fav-icon.active:hover { transform: scale(1.1); }
+
+.btn-center { margin-top: 32px; display: flex; justify-content: center; }
+
+.btn-view-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 32px;
+    border: 1px solid var(--outline-variant);
+    background: transparent;
+    border-radius: 9999px;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-view-more:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Lưới hiển thị Ca sĩ */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+    .artists-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+    .artists-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.artist-img-wrapper {
+    width: 100%;
+    max-width: 128px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid transparent;
+    padding: 4px;
+    transition: all 0.3s;
+}
+
+.artist-card:hover .artist-img-wrapper { border-color: var(--primary); }
+
+.artist-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.artist-card:hover img { transform: scale(1.1); }
+
+.artist-card span {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    transition: color 0.3s;
+}
+
+.artist-card:hover span { color: var(--primary); }
+
+/* Khối video grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+    .video-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+}
+
+.video-card { cursor: pointer; }
+
+.video-thumbnail-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid var(--outline-variant);
+}
+
+.video-thumbnail-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.video-card:hover .video-thumbnail-wrapper img { transform: scale(1.05); }
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.video-card:hover .video-overlay { background-color: rgba(0, 0, 0, 0.2); }
+
+.video-play-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+}
+
+.video-play-btn span { color: #ffffff; font-size: 36px; }
+
+.video-card:hover .video-play-btn { transform: scale(1.1); }
+
+.video-card h4 { font-size: 20px; font-weight: 600; }
+
+.video-card p { font-size: 14px; color: var(--on-surface-variant); }
